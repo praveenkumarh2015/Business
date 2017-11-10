@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Business for Buy</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+</head>
+<body >
+<div class="modal fade" id="logonBox" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+            <h4 class="modal-title">Sign In</h4>
+          </div>
+
+          <div class="modal-body">
+            <div>
+              <ul class="nav nav-pills">
+                <li class="active">
+                  <a href="#signin" data-toggle="tab" data-caption="Sign In">Sign In
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#signup" data-toggle="tab" data-caption="Sign Up">Sign Up
+                  </a>
+                </li>
+              </ul>
+
+              <div class="tab-content">
+                <div class="tab-pane active" id="signin">
+                  <form name="form" style="padding-top: 5px">
+                      <div class="form-group" ng-class="{true: 'error'}[submitted && form.text.$invalid]" class="form-control" id="userName" placeholder="User Name">
+
+                      <input type="text" class="form-control" id="userName" placeholder="User Name" name="text" ng-model="text" required />
+
+                      <span class="help-inline" ng-show="submitted && form.text.$error.required"></span>
+                </div>
+
+
+                <div class="form-group" ng-class="{true: 'error'}[submitted && form.password.$invalid]" class="form-control" id="password" placeholder="Password">
+
+                      <input type="password" class="form-control" id="password" placeholder="password" name="text" ng-model="password" required />
+
+                      <span class="help-inline" ng-show="submitted && form.password.$error.required"></span>
+                </div>
+   
+                    <button type="submit" class="btn btn-primary btn-large" ng-click="submitted=true">Submit</button>
+                </form>
+         
+                </div>
+
+                <div class="tab-pane" id="signup">
+                  <form style="padding-top: 5px">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="yourName" placeholder="Your Full Name">
+                    </div>
+
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="yourUserName" placeholder="Desired User Name">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="yourEmail" placeholder="Your Email Id">
+                    </div>
+
+                    <div class="form-group">
+                      <input type="password" class="form-control" id="yourPwd" placeholder="Password">
+                    </div>
+
+                    <div class="form-group">
+                      <input type="password" class="form-control" id="confirmPwd" placeholder="Confirm Password">
+                    </div>
+
+                    <button type="button" class="btn btn-round  btn-primary btn-block" id="doLogon">Sign Up
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-round btn-primary" data-dismiss="modal"> Cancel</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="index.html">Business</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">Buyer's Available</a></li>
+        <li class="active"><a href="skills.html">Skills Used</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#login" id="logonLink"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+                  <div class="hovereffect">
+                    <img src="images/1.jpg" alt="" class="img-thumbnail img-responsive">
+                    <a class="overlay" data-toggle="modal" data-target="#skills">
+                      <h4>Bootstrap & Angular js</h4>
+                      <p>Responsive Web Design</p>
+                    </a>
+                  </div>
+                  <br>
+                  <a class="btn btn-info btn-default btn-block" data-toggle="modal" data-target="#skills">Click Here</a>
+                </div>
+
+                <div class="modal fade" id="skills" tabindex="-1" role="dialog" aria-labelledby="skills-label" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                        </button>
+
+                        <h4 class="modal-title" id="skills-label">Responsive Web Design</h4>
+
+                      </div>
+                      <div class="modal-body">
+                        <h3 class="page-header text-center">Business</h3>
+                        <div class="row">
+                          
+                          <div class="col-md-8">
+                            <img src="images/3.jpg" alt="" style="height: 100%; width: 100%;">
+                          </div>
+
+                          <div class="col-md-4">
+                            <ul class="animated swing">
+                              <li> <h4> Bootstrap </h4></li>
+                              <li> <h4> Angular js </h4></li>
+                              <li> <h4> Responsive Web Design </h3></li>
+                              <li> <h4> Single Page Web Application with router </h4></li>
+                              <li> <h4> Filter </h4></li>
+                              <li> <h4> Form Validation </h4></li>
+                            </ul>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                      
+                        <button type="button" class="btn btn-sm btn-info" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+  </div>
+  </div>
+</div>
+
+<footer class="footer animate-box">
+  <div class="footer-left col-md-4 col-sm-6">
+    <p class="about text-justify">
+      <span> About me</span> I'm Praveen Kumar from Chennai, Completed my Post Graduate in Vellore Institute of Technology in Chennai Campus. I'm passionate in front end developer, more interest is to develop an attractive website in all aspects.
+    </p>
+    <div class="icons">
+      <a href="https://goo.gl/bFDdT7" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://goo.gl/rvyoym" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/praveenkumarh2015" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+    </div>
+  </div>
+  <div class="footer-center col-md-4 col-sm-6">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p> Chennai</p>
+    </div>
+    <div>
+      <i class="fa fa-link"></i>
+      <p> praveen-kumar-h.cf</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p>praveenkumar.h2015@vit.ac.in</p>
+    </div>
+  </div>
+  <div class="footer-right col-md-4 col-sm-6">
+    <h2 style="font-family: Italianno; font-size: 50px;">Business</h2>
+    <p class="menu">
+      <a href="index.html"> Buyer's Available</a> |
+      <a href="skills.html"> Skills</a> 
+
+    </p>
+  </div>
+</footer>
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $http.get("business.php").then(function (response) {
+      $scope.myData = response.data.records;
+  });
+});
+
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+
+$('#logonLink').on('click', function(e) {
+  $('#logonBox').modal({
+    keyboard: false,
+    backdrop: 'static'
+  });
+});
+
+
+</script>
+
+</body>
+</html>
